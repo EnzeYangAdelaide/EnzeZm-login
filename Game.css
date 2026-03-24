@@ -11,6 +11,20 @@ body {
     background: #020410;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    display: flex;
+    /* 让 panel 在内部居中 */
+    justify-content: center;
+    align-items: center;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -130,7 +144,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     display: flex;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.7);
 }
 
 .container .content {
@@ -141,7 +155,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .logo {
@@ -191,6 +205,7 @@ body {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(20px);
+    background: 0 10px 60px rgba(255, 255, 255, 1.0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -255,8 +270,8 @@ body {
     transition: 0.3s ease;
 }
 
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
+.input-box input:focus~label,
+.input-box input:valid~label {
     top: -5px;
     font-size: 12px;
     color: #ff6b6b;
@@ -322,4 +337,80 @@ body {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+/* ===== 新增：身份选择与学生界面的样式 ===== */
+
+/* 身份选择的大按钮 */
+.role-btn {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    color: #e4e4e4;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.role-btn:hover {
+    background: #e4e4e4;
+    color: #020410;
+}
+
+.role-btn i {
+    font-size: 24px;
+}
+
+.back-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: transparent;
+    border: none;
+    color: #e4e4e4;
+    cursor: pointer;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+
+.input-box {
+    border-bottom: 2px solid #333333;
+}
+
+.input-box input {
+    color: #020410;
+    font-weight: 600;
+}
+
+.input-box label {
+    color: #333333;
+    font-weight: 500;
+}
+
+.input-box input::placeholder {
+    color: #555555;
+    font-weight: 500;
+}
+
+.input-box .icon i,
+.input-box i {
+    color: #020410;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    color: #c4103d !important;
+    font-weight: 600;
 }
