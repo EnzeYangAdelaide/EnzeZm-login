@@ -139,7 +139,7 @@ document.getElementById('studentForm').addEventListener('submit', async function
   const nickname = document.getElementById('nicknameInput').value;
 
   try {
-    // ⚠️ [Backend Integration Point 1: Modify this URL]
+    // [Backend Integration Point 1: Modify this URL]
     // Once the Node.js backend is ready, replace the URL below with the real API address
     const response = await fetch('http://localhost:3000/api/game/join', {
       method: 'POST',
@@ -152,11 +152,11 @@ document.getElementById('studentForm').addEventListener('submit', async function
       const data = await response.json();
       alert("Welcome " + nickname + "! Room found. Loading Game...");
 
-      // ⚠️ [Backend Integration Point 2: Save backend credentials]
+      // [Backend Integration Point 2: Save backend credentials]
       // To let Unity know which student entered, the backend usually returns a sessionToken. We need to save it.
       localStorage.setItem('studentSessionToken', data.token); // Assuming backend returns { "token": "..." }
 
-      // ⚠️ [Backend Integration Point 3: Modify redirect page]
+      // [Backend Integration Point 3: Modify redirect page]
       // Change this to the actual HTML file name where your Unity WebGL game is hosted.
       // Pass the room code in the URL parameters so Unity can read it.
       window.location.href = `unity-game.html?room=${roomCode}`;
