@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Readly Reading Website</title>
+    <link rel="stylesheet" href="Game.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#">Website Story</a>
+        </nav>
+
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit" aria-label="Search" title="Search">
+                <i class="bx bx-search" aria-hidden="true"></i>
+            </button>
+        </form>
+    </header>
+
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <h2 class="logo"><i class="bx bxs-book"></i> GameDeck</h2>
+            <div class="text-sci">
+                <h2>Welcome!<br><span>To GameDeck !</span></h2>
+                <p>I haven't decided yet, but this is the introduction.</p>
+                <div class="social-icons">GameDeck
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="bx bxl-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="bx bxl-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="bx bxl-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="bx bxl-twitter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="logreg-box">
+            <div class="form-box login">
+                <form action="#" class="login">
+                    <h2>Log In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-envelope"></i></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Keep me signed in </label>
+                        <a href="#">Forgot password ?</a>
+                    </div>
+                    <button type="submit" class="btn">Log In</button>
+                    <div class="login-register">
+                        <p>Don't have an account ? <a href="#" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <form action="#" class="register">
+                    <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-envelope"></i></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-user"></i></span>
+                        <input type="text" required>
+                        <label>Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> I agree to all the terms &amp; conditions</label>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                    <div class="login-register">
+                        <p>Already have an account ? <a href="#" class="login-link">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Game.js"></script>
+</body>
+</html>
