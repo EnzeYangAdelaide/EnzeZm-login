@@ -18,3 +18,9 @@
 前端会发： {"roomCode": "X7R2", "nickname": "Enze"}
 
 后端请返回： 去数据库查有没有这个 code，如果有且状态是 active，返回 200 和 {"token": "临时sessionToken"}；没有请报错 {"message": "房间不存在"}。
+
+
+三个URL分别 register login studentjoin
+71 register
+106 login
+144 join
