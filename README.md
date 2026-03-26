@@ -7,11 +7,15 @@ fe send： {"email": "...", "username": "...", "password": "..."}
 
 be feedback： succes: 200/201；if email duplicate，feedback {"message": "email execest"}。
 
+
+
 teacher login port： POST /api/auth/login
 
 fe send： {"email": "...", "password": "..."}
 
 be feedback： sucess back {"token": "your JWT num"}；fail reply {"message": "wrong password"}。
+
+
 
 student joining code： POST /api/game/join
 
