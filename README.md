@@ -5,7 +5,7 @@ teacher login port： POST /api/auth/register
 
 fe send： {"email": "...", "username": "...", "password": "..."}
 
-be feedback： succes: 200/201；if email duplicate，feedback {"message": "邮箱已存在"}。
+be feedback： succes: 200/201；if email duplicate，feedback {"message": "email execest"}。
 
 teacher login port： POST /api/auth/login
 
