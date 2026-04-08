@@ -138,3 +138,84 @@ footer {
     font-size: 22px;
     color: #e4e4e4;
 }
+
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 60px;
+    color: #c4103d;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #111;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #020410;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #333;
+}
+
+
+.highlight {
+    border: 3px solid #2196f3;
+}
+
+.start-game-btn {
+    background: #2196f3;
+}
+
+.start-game-btn:hover {
+    background: #1976d2;
+}
+
+
+.logout-btn {
+    background: #e74c3c;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
