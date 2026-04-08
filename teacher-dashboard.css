@@ -191,7 +191,6 @@ footer {
     margin-bottom: 24px;
 }
 
-/* 让中间卡片更突出 */
 .highlight {
     transform: scale(1.03);
     background: rgba(255, 255, 255, 0.94);
@@ -205,7 +204,6 @@ footer {
     color: #e63946;
 }
 
-/* ===== 按钮统一基础样式 ===== */
 .action-btn {
     margin-top: auto;
     padding: 12px 22px;
@@ -233,7 +231,6 @@ footer {
     transform: scale(0.97);
 }
 
-/* 按钮表面高光 */
 .action-btn::after {
     content: "";
     position: absolute;
@@ -250,7 +247,6 @@ footer {
     left: 130%;
 }
 
-/* ===== 不同按钮颜色 ===== */
 .card .action-btn {
     background: linear-gradient(135deg, #4facfe, #00c6ff);
 }
@@ -263,7 +259,6 @@ footer {
     background: linear-gradient(135deg, #ff6a6a, #ff3d3d);
 }
 
-/* ===== 小屏幕适配 ===== */
 @media (max-width: 1024px) {
     .dashboard-cards {
         gap: 20px;
