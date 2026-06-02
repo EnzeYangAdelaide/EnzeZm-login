@@ -1,3 +1,62 @@
+<<<<<<< HEAD
+document.addEventListener('DOMContentLoaded', () => {
+
+    const logoutBtn = document.getElementById('logoutBtn');
+    const hostGameBtn = document.getElementById('hostGameBtn');
+
+    if (hostGameBtn) {
+        hostGameBtn.addEventListener('click', async () => {
+            try {
+                console.log("apply real game room biulding...");
+
+                const token = localStorage.getItem('gameDeckToken');
+                let finalTeacherName = 'Teacher';
+
+                if (token) {
+                    try {
+                        const decoded = jwtDecode.jwtDecode(token);
+                        finalTeacherName = decoded.full_name || decoded.username || decoded.name || 'Teacher';
+                        console.log(`teacher name detected: ${finalTeacherName}`);
+                    } catch (decodeErr) {
+                        console.error("Token fail", decodeErr);
+                    }
+                }
+
+                const response = await fetch('http://localhost:3000/api/session/create', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ teacher_name: finalTeacherName })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log("房间创建成功，数据：", data);
+
+                    localStorage.setItem('gameDeckRoomCode', data.session.join_code);
+                    localStorage.setItem('gameDeckSessionId', data.session.session_id);
+                    localStorage.setItem('gameDeckRole', 'teacher');
+
+                    window.location.href = `unity-game.html?roomCode=${data.session.join_code}&role=teacher&name=${encodeURIComponent(finalTeacherName)}`;
+                } else {
+                    alert("Failed to create room on server.");
+                }
+            } catch (error) {
+                console.error("Backend fail to connect：", error);
+                alert("Cannot connect to server.");
+            }
+        });
+    }
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+            if (confirm("Are you sure you want to sign out?")) {
+                localStorage.removeItem('gameDeckToken');
+                localStorage.removeItem('gameDeckTeacherName');
+                window.location.href = 'Game.html';
+            }
+        });
+    }
+=======
 document.addEventListener('DOMContentLoaded', () => {
 
     const logoutBtn = document.getElementById('logoutBtn');
@@ -67,4 +126,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+>>>>>>> e1151ec81ad9be5687041646692dcb30ebb276a9
 });
